@@ -26,7 +26,7 @@ export const books = [
     category: 'সীরাতে রাসূল (সা)',
     price: 20,
     coverImage: 'https://upload.wikimedia.org/wikipedia/bn/thumb/4/47/%E0%A6%86%E0%A6%B0%E0%A7%8D-%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A7%80%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A6%BE%E0%A6%96%E0%A6%A4%E0%A7%82%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%B8%E0%A6%82%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A6%A3%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%A6.jpg/250px-%E0%A6%86%E0%A6%B0%E0%A7%8D-%E0%A6%B0%E0%A6%BE%E0%A6%B9%E0%A7%80%E0%A6%95%E0%A7%81%E0%A6%B2_%E0%A6%AE%E0%A6%BE%E0%A6%96%E0%A6%A4%E0%A7%82%E0%A6%AE%E0%A7%87%E0%A6%B0_%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE_%E0%A6%B8%E0%A6%82%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A6%B0%E0%A6%A3%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%A6.jpg',
-    pdfUrl: 'pdfs/2.pdf',
+    <a href="https://drive.google.com/file/d/1LOT-Lu7COOiHqcNaU0ixthhcyAC787Zv/view?usp=sharing" target="_blank"></a>,
     unlockCode: 'SEALEDNECTAR456',
   },
   {
