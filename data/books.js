@@ -36,7 +36,7 @@ export const books = [
     category: 'আত্ম-উন্নয়ন',
     price: 20,
     coverImage: 'https://wafilife-media.wafilife.com/uploads/2020/01/Bela-Furabar-Agey-Front-250x395.png',
-    pdfUrl: 'pdfs/3.pdf',
+    <a href="https://drive.google.com/file/d/1kbL7I3cUM8ludLiBW3GARpRRXE1Rr_2z/view?usp=sharing" target="_blank"></a>,
     unlockCode: 'BELA789',
   },
   {
