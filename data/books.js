@@ -15,6 +15,7 @@ export const books = [
     author: 'আরিফ আজাদ',
     category: 'ইসলামি আকিদা ও বিশ্বাস',
     price: 20,
+    <a href="https://drive.google.com/file/d/1WosMxLrvcSmlgUrdReIx4i7nc0lGdrdo/view?usp=sharing"></a>,
     coverImage: 'https://upload.wikimedia.org/wikipedia/bn/thumb/2/2f/%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%BE%E0%A6%A1%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2_%E0%A6%B8%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%A6_%E0%A6%AC%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%A6.jpeg/250px-%E0%A6%AA%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B0%E0%A6%BE%E0%A6%A1%E0%A6%95%E0%A7%8D%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2_%E0%A6%B8%E0%A6%BE%E0%A6%9C%E0%A6%BF%E0%A6%A6_%E0%A6%AC%E0%A6%87%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%B0_%E0%A6%AA%E0%A7%8D%E0%A6%B0%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A6%A6.jpeg',
     unlockCode: 'SAJID123',
   },
