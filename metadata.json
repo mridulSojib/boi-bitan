@@ -1,0 +1,6 @@
+{
+  "name": "Islamic PDF Book Store",
+  "description": "A digital bookstore for selling Islamic PDF books in Bengali, with a unique code-based unlocking system after payment via bKash and WhatsApp verification.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

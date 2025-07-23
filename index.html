@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ইসলামিক বই বিতান</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans Bengali', sans-serif;
+      }
+      /* Simple transition for modals */
+      .modal-hidden {
+        display: none;
+        opacity: 0;
+      }
+      .modal-visible {
+        display: flex;
+        opacity: 1;
+      }
+      .modal-transition {
+        transition: opacity 0.3s ease-in-out;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.6",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto px-4 py-6 text-center">
+        <div class="flex justify-center items-center gap-4 text-green-800">
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+           <h1 class="text-4xl md:text-5xl font-bold">ইসলামিক বই বিতান</h1>
+        </div>
+        <p class="text-gray-600 mt-2 text-lg">আপনার জ্ঞানের সঙ্গী</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Filter Controls -->
+        <div id="filter-controls-container" class="mb-8 p-4 bg-white rounded-lg shadow-sm flex flex-col md:flex-row gap-4 justify-center items-center">
+             <div class="w-full md:w-auto">
+                <label for="category-select" class="block text-sm font-medium text-gray-700 mb-1">ক্যাটাগরি:</label>
+                <select id="category-select" class="block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"></select>
+            </div>
+            <div class="w-full md:w-auto">
+                <label for="author-select" class="block text-sm font-medium text-gray-700 mb-1">লেখক:</label>
+                <select id="author-select" class="block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"></select>
+            </div>
+        </div>
+
+        <!-- Book List -->
+        <div id="book-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Book cards will be injected here by JavaScript -->
+        </div>
+        <div id="no-books-found" class="text-center py-10 text-gray-500 hidden">কোনো বই পাওয়া যায়নি।</div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; ২০২৪ ইসলামিক বই বিতান। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p class="text-sm text-gray-400 mt-2">একটি আধুনিক ডিজিটাল বই বিতান</p>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Purchase Modal -->
+    <div id="purchase-modal" class="modal-hidden fixed inset-0 bg-black bg-opacity-60 justify-center items-center z-50 p-4 modal-transition">
+      <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-lg w-full relative transform transition-all duration-300 scale-95">
+        <button id="purchase-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800">
+          <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <h2 class="text-2xl font-bold text-center text-green-800 mb-4">বইটি কেনার নিয়মাবলী</h2>
+        <div class="text-center my-4">
+          <p id="purchase-book-title" class="text-lg font-semibold"></p>
+          <p id="purchase-book-price" class="text-2xl font-bold text-red-600 mt-2"></p>
+        </div>
+        <div class="space-y-4 text-gray-700">
+            <!-- Payment instructions here -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- Unlock Modal -->
+    <div id="unlock-modal" class="modal-hidden fixed inset-0 bg-black bg-opacity-60 justify-center items-center z-50 p-4 modal-transition">
+      <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full relative transform transition-all duration-300 scale-95">
+        <button id="unlock-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+        <div class="text-center">
+          <svg class="w-12 h-12 mx-auto text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
+          <h2 class="text-2xl font-bold text-gray-800 mt-4">বই আনলক করুন</h2>
+          <p id="unlock-book-title" class="text-gray-600 mt-2"></p>
+        </div>
+        <form id="unlock-form" class="mt-6">
+          <div class="mb-4">
+            <label for="unlock-code-input" class="block text-sm font-medium text-gray-700 sr-only">আনলক কোড</label>
+            <input type="text" id="unlock-code-input" placeholder="এখানে কোড লিখুন" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 text-lg text-center" required>
+          </div>
+          <p id="unlock-error" class="text-red-600 text-sm mb-4 text-center hidden"></p>
+          <button type="submit" class="w-full bg-green-700 text-white font-bold py-3 px-4 rounded-md hover:bg-green-800 transition-colors duration-300 flex items-center justify-center gap-2">বইটি খুলুন</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
